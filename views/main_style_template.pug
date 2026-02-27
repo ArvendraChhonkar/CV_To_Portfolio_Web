@@ -1,0 +1,27 @@
+<doctype html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title #{title}
+        link(rel="stylesheet", href="/Styles/main_temp.css")
+    body 
+    block headers
+
+    header
+        nav.navbar 
+            .logo 
+                .logo-icon 
+                    img.logo_logo(src="/assets/logo.png", alt="Logo")
+            
+                span.logo-text
+            
+            ul.nav-links
+                li
+                    a.active(href="/") Home
+                li
+                    a.active(href="/Upload's") Upload  
+                
+    block content
+
+

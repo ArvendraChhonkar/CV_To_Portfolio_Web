@@ -1,0 +1,50 @@
+extends main_style_template.pug
+
+block headers
+    link(rel="stylesheet", href="/Styles/main.css")
+
+block content
+  .formmm 
+    form(action="/Upload's", method="POST", enctype="multipart/form-data")
+        .form-group
+            label.form-label(for="Template") Template:
+                .template-row
+                    .template-option
+                        input(type="radio", name="template", id="template1", value="template1")
+                        label(for="template1") Template 1
+                        img(src="", alt="")
+                    .template-option
+                        input(type="radio", name="template", id="template2", value="template2")
+                        label(for="template2") Template 2
+                        img(src="", alt="")
+                    .template-option
+                        input(type="radio", name="template", id="template3", value="template3")
+                        label(for="template3") Template 3
+                        img(src="", alt="")
+                    .template-option
+                        input(type="radio", name="template", id="template4", value="template4")
+                        label(for="template4") Template 4
+                        img(src="", alt="")
+        .form-group
+            label.form-label() Select Method:
+                .radio-group
+                    .radio-option
+                        input(type="radio", name="method", id="llm-api", value="LLM-API")
+                        label(for="llm-api") LLM-API
+                    .radio-option
+                        input(type="radio", name="method", id="nlp", value="NLP")
+                        label(for="nlp") NLP
+        .form-group
+            label.form-label() File Type: 
+                .radio-group
+                    .radio-option
+                        input(type="radio", name="fileType", id="pdf", value="PDF")
+                        label(for="pdf") PDF
+                    .radio-option
+                        input(type="radio", name="fileType", id="docx", value="DOCX")
+                        label(for="docx") DOCX
+        .form-group
+            label.form-label(for="file") Upload File:
+            input.file-input(type="file", name="file", id="file")
+
+        button.submit-btn(type="submit") Submit

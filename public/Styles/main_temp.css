@@ -1,0 +1,133 @@
+/* styles.css - Dark theme navigation bar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #ffffff;
+}
+
+body {
+    background-color: #121212;
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.5;
+    min-height: 100vh;
+}
+
+/* navigation bar container - CHANGED COLOR */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1a1f2e;  /* Changed to deep navy blue */
+    padding: 0.65rem 2rem;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.5);
+    border-bottom: 3px solid #00ADB5;
+}
+
+/* logo block */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+
+.logo-icon {
+    background-color: #00ADB5;
+    width: 42px;
+    height: 42px;
+    border-radius: 12px 4px 18px 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1a1f2e;
+    font-weight: 700;
+    font-size: 1.9rem;
+    line-height: 1;
+    box-shadow: 0 3px 0 #006c73;
+    transition: transform 0.15s ease;
+}
+
+.logo-icon:hover {
+    transform: scale(1.02);
+    background-color: #29bdc5;
+}
+
+.logo-text {
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: #EEEEEE;
+    background: rgba(0, 173, 181, 0.15);
+    padding: 0.2rem 0.8rem 0.2rem 0.6rem;
+    border-radius: 30px;
+    border: 1px solid #00ADB5;
+}
+
+/* nav links container */
+.nav-links {
+    display: flex;
+    gap: 0.2rem;
+    list-style: none;
+    background-color: #0f1322;  /* Darker navy to match navbar */
+    padding: 0.25rem;
+    border-radius: 3rem;
+    border: 1px solid #00ADB5;
+}
+
+.nav-links li a {
+    display: inline-block;
+    padding: 0.5rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 2.2rem;
+    color: #EEEEEE;
+    background-color: transparent;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+}
+
+/* Home link subtle highlight */
+.nav-links li:first-child a {
+    background-color: rgba(0, 173, 181, 0.18);
+    border: 1px solid #00ADB5;
+}
+
+.nav-links li a:hover {
+    background-color: #00ADB5;
+    color: #1a1f2e;
+    border-color: #EEEEEE;
+    box-shadow: 0 2px 0 #1a1f2e;
+}
+
+/* Upload arrow indicator */
+.nav-links li:last-child a::after {
+    content: " ⬆";
+    font-size: 0.85rem;
+    opacity: 0.9;
+    color: #EEEEEE;
+    transition: color 0.2s;
+}
+
+.nav-links li:last-child a:hover::after {
+    color: #1a1f2e;
+}
+
+/* right side badge - optional */
+.nav-actions {
+    width: 105px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.palette-badge {
+    background-color: #0f1322;
+    color: #EEEEEE;
+    border-radius: 24px;
+    padding: 0.2rem 1.1rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border: 1px solid #00ADB5;
+    opacity: 0.95;
+}
