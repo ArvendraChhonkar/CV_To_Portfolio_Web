@@ -1,2 +1,7 @@
 # Ignore node_modules
 /node_modules/
+# Ignore npm logs
+npm-debug.log*
+# Ignore pdf and docs
+*.docx
+*.pdf
