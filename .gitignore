@@ -5,3 +5,20 @@ npm-debug.log*
 # Ignore pdf and docs
 *.docx
 *.pdf
+node_modules/
+package-lock.json
+
+# Python environment & cache
+__pycache__/
+.venv/
+.ipynb_checkpoints/
+
+# User Uploads & Generated Portfolios
+uploaded/
+public/portfolios/*.html
+
+# Environment variables
+.env
+
+# Large model files (optional, if you use Git LFS)
+# portfolio_ner_model/

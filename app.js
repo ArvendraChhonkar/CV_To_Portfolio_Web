@@ -1,5 +1,7 @@
 const express = require('express');
 const mainRoute = require('./routes/Main_route');
+const upload_rout = require('./routes/Upload_route');
+const path = require('path');   
 
 
 const app = express();
@@ -7,9 +9,10 @@ const app = express();
 app.set('view engine', 'pug');
 app.set('views', './views');
 //public refference to css and js files
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(mainRoute);
+app.use(upload_rout);
 
 app.use((req, res, next) => {
     console.log("404 Not Found");

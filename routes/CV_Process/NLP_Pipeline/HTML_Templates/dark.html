@@ -1,0 +1,17 @@
+<body class="bg-slate-950 text-slate-300 font-mono p-10">
+    <div class="max-w-3xl mx-auto border border-slate-800 p-8 rounded-lg">
+        <div class="text-emerald-400 mb-8">> whoami</div>
+        <div class="mb-8">
+            <h1 class="text-3xl text-white font-bold">{{ data.NAME }}</h1>
+            <p class="text-emerald-500"># {{ data.JOB_TITLE }}</p>
+        </div>
+        <div class="text-emerald-400 mb-2">> cat projects.txt</div>
+        <div class="text-slate-400 mb-8 border-l-2 border-slate-800 pl-4">
+            {{ data.PROJECTS_SECTION }}
+        </div>
+        <div class="text-emerald-400 mb-2">> ls skills/</div>
+        <div class="grid grid-cols-2 gap-2 text-xs">
+            {% for skill in data.SKILLS %}<div class="text-slate-500">- {{ skill }}</div>{% endfor %}
+        </div>
+    </div>
+</body>

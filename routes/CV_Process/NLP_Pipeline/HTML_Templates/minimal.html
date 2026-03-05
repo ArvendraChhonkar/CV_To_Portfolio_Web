@@ -1,0 +1,18 @@
+<body class="bg-white p-12 font-serif">
+    <div class="max-w-2xl mx-auto">
+        <header class="mb-20">
+            <h1 class="text-6xl font-black mb-4 uppercase tracking-tighter">{{ data.NAME }}</h1>
+            <p class="text-xl italic">{{ data.JOB_TITLE }}</p>
+        </header>
+        <div class="grid grid-cols-1 gap-12">
+            <div>
+                <h3 class="font-bold border-t pt-2">PROJECTS</h3>
+                <p class="mt-4 text-gray-700 leading-relaxed">{{ data.PROJECTS_SECTION }}</p>
+            </div>
+            <div>
+                <h3 class="font-bold border-t pt-2">EXPERTISE</h3>
+                <p class="mt-4">{{ data.SKILLS|join(', ') }}</p>
+            </div>
+        </div>
+    </div>
+</body>
